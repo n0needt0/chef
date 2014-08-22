@@ -1,0 +1,29 @@
+{
+  "name": "poise",
+  "description": "Extensions to Chef for creating reusable cookbooks",
+  "long_description": "# Poise\n\n[![Build Status](https://travis-ci.org/poise/poise.png?branch=master)](https://travis-ci.org/poise/poise)\n\nThe poise cookbook provides patterns and helpers for writing reusable Chef\ncode.\n\n## Quick start\n\nCreate a `libraries/default.rb` file in your cookbook like so:\n\n```ruby\nclass Chef\n  class Resource::MyResource < Resource\n    include Poise\n    actions(:enable, :disable)\n    attribute(:path, kind_of: String)\n  end\n\n  class Provider::MyResource < Provider\n    def action_enable\n      converge_by(\"enable resource #{new_resource.name}\") do\n        notifying_block do\n          ... # Normal Chef recipe code goes here\n        end\n      end\n    end\n  end\nend\n```\n\nYou can then use this resource like any other Chef resource:\n\n```ruby\nmy_resource 'one' do\n  path '/tmp'\nend\n```\n\n## Patterns\n\n### Notifying Block\n\nModule: `Poise::Provider::NotifyingBlock`\n\n\n\n### Include Recipe\n\n### Sub-resources\n\n#### Container\n\n#### Child\n\n### Lazy Attribute Default\n\n### Option Collector\n\n## Helpers\n\n### LWRP API\n\n### Resource Name\n\n## Using the Poise module\n\n",
+  "maintainer": "Noah Kantrowitz",
+  "maintainer_email": "noah@coderanger.net",
+  "license": "Apache 2.0",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "1.0.10"
+}
