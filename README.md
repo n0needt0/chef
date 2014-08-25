@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Overview
 ========
 
@@ -64,3 +65,7 @@ Next Steps
 ==========
 
 Read the README file in each of the subdirectories for more information about what goes in those directories.
+=======
+chef
+====
+>>>>>>> c2cab327c63253e4cceec99ae525b125fdcdd17f

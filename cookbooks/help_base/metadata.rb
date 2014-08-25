@@ -8,4 +8,4 @@ version          '0.1.0'
 
 depends 'chef-client'
 depends 'openssh'
-depends 'balanced-user'
+depends 'help_user'
