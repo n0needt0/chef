@@ -2,12 +2,14 @@
 # Cookbook Name:: help_base
 # Recipe:: default
 #
-# Copyright 2014, help
+# Copyright 2014, helppain
+
 #
-#THis cook book installs basics
 # All rights reserved - Do Not Redistribute
 #
-#install Git, Curl, build -essentials
+# This cook book installs basics stuff
+#
+# install Git, Curl, build -essentials
 
 
 package 'git' do 
@@ -30,4 +32,4 @@ include_recipe 'openssh'
 
 include_recipe 'chef-client::service'
 
-include_recipe 'balanced-user'
+include_recipe 'help_user'
